@@ -38,6 +38,20 @@ Before we begin, it's important to understand the key concepts and taxonomy of t
 
 **Clients**: The `Client` object contains the platform or device-specific Paket auth (OAuth2) configuration for a service's user-facing Application client (e.g., Roku, iOS, Android, etc.).
 
+Now that we're familiar with the key concepts and taxonomy, here's how the API works:
+
+1. Authenticate the user and retrieve the client-specific `access_token`,`refresh_token`, and `id_token`;
+2. Retrieve available licenses by calling the `/license` api endpoint and passing the `access_token` in the `Authorization` header; and
+3. Retrieve new access tokens as necessary by calling the `/oauth2/authorization` endpoint using the `refresh_token` response type.
+
+Though the above flow represents the general use case of the Paket API, service providers are free to configure additional logic on their end (e.g., creating a local user or profile object from the OpenID data shared via the `id_token`) so as to deliver the optimal experience to the end user. 
+
+## Statuses 
+
+## Price Tiers
+
+## Testing
+
 # Authentication
 
 > To authorize, use this code:
