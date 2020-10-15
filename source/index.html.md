@@ -1,5 +1,5 @@
 ---
-title: API Reference
+title: Paket API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -8,7 +8,8 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
+  - <a href='https://publisher.paket.tv'>Sign In to the Publisher Portal</a>
+  - <a href='https://publisher.paket.tv/signup'>Request Access</a>
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
@@ -19,13 +20,23 @@ search: true
 code_clipboard: true
 ---
 
-# Introduction
+# Introduction 
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to Paket. Paket is a utility platform for streaming media services that unifies authentication, billing, and discovery into a seamless and frictionless experience for users.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+While nearly all of the Platform's business logic (including account creation, billing, recurring payments, etc.) happens on Paket's end, streaming service providers will need to integrate with Paket's API to be able to authenticate users and to access the authenticated user's entitlements to the respective service via the Paket API.
 
-This example API documentation page was created with [Slate](https://github.com/slatedocs/slate). Feel free to edit it and use it as a base for your own API's documentation.
+# Getting Started
+
+Before we begin, it's important to understand the key concepts and taxonomy of the platform, each of which can be configured in the [Paket Publisher Portal](https://publisher.paket.tv):
+
+**Companies**: The `Company` is the primary object to which Apps are associated. This is where the business details are configured. In most situations, an account will have only one Company;
+
+**Apps**: The `App` is the primary object to which Clients and Licenses are associated. This is the high-level representation of your service, its consumer-facing title (e.g., Hulu), description, and supporting metadata;
+
+**Licenses**: The `License` object represents an entitlement offered via your App (e.g., Limited Ads at $5.99 / mo, No Ads at $9.99 / mo, etc.); and
+
+**Clients**: The `Client` object contains the platform or device-specific Paket auth (OAuth2) configuration for a service's user-facing Application client (e.g., Roku, iOS, Android, etc.).
 
 # Authentication
 
