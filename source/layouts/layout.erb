@@ -104,6 +104,13 @@ under the License.
           <% end %>
         </ul>
       <% end %>
+      <% if current_page.data.copyright %>
+        <ul class="copyright">
+          <% current_page.data.copyright.each do |copyright| %>
+            <li><%= copyright %></li>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>

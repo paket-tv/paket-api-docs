@@ -11,14 +11,15 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - objective_c
 
 toc_footers:
-  - <a href='https://publisher.paket.tv'>Sign In to the Publisher Portal</a>
-  - <a href='https://publisher.paket.tv/signup'>Request Access</a>
-  - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
+  # - <a href='https:/publisher.paket.tv'>Sign In to the Publisher Portal</a>
+  # - <a href='https://publisher.paket.tv/signup'>Request Access</a>
+
+copyright: 
+  - <a>© 2020-2021 Paket Media, Inc.</a>
 
 includes:
   - authentication
   - licenses
-  - plan
   - errors
 
 search: true
@@ -32,13 +33,15 @@ Welcome to Paket. Paket is a utility platform for streaming media services that 
 
 While nearly all of the Platform's business logic (including account creation, billing, recurring payments, etc.) happens on Paket's end, streaming service providers will need to integrate with Paket's API to be able to authenticate users and to access the authenticated user's entitlements to the respective service via the Paket API.
 
+Also, please note that this documentation illustrates how to call the API using the standard methods employed by various software development frameworks, the framework-specific examples will be updated with community SDK examples as such SDKs are warranted and made available.
+
 <aside class="notice">
-  While we will be regularly adding business features to the publisher portal prior to launch, we expect few - if any - changes to these client APIs. Any updates or changes will be announced well in advance.
+  While we will be regularly adding features to the publisher portal prior to launch, we do not expect any breaking changes to the client APIs. Any updates or changes will be announced well in advance.
 </aside>
 
 # Getting Started
 
-Before we begin, it's important to understand the key concepts and taxonomy of the platform, each of which can be configured in the [Paket Publisher Portal](https://publisher.paket.tv):
+Before we begin, it's important to understand the key concepts and taxonomy of the platform, each of which can be configured in the [Paket Publisher Portal](https://www.paket.tv):
 
 **Companies**: The `Company` is the primary object to which Apps are associated. This is where the business details are configured. In most situations, an account will have only one Company;
 
@@ -52,7 +55,7 @@ Now that we're familiar with the key concepts and taxonomy, here's how the API w
 
 1. **Authenticate** the user and retrieve the client-specific `access_token`,`refresh_token`, and `id_token`;
 2. **Retrieve** available licenses by calling the `/licenses` api endpoint and passing the `access_token` in the `Authorization` header; and
-3. **Refresh** new access tokens as necessary by calling the `/oauth2/authorization` endpoint using the `refresh_token` response type.
+3. **Refresh** new access tokens as necessary by calling the AUTHORIZATION Endpoint using the `refresh_token` response type.
 
 Though the above flow illustrates how to use the Paket API, service providers are encouraged to configure additional logic on their end (e.g., creating a local user or profile object from the OpenID data shared via the `id_token`) so as to deliver the optimal experience to the end user. 
 
