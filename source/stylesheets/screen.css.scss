@@ -40,23 +40,78 @@ a {
   text-decoration: none;
   color: #2484FF;
 }
+
+////////////////////////////////////////////////////////////////////////////////
+// NAV BAR
+////////////////////////////////////////////////////////////////////////////////
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  height: 70px;
+  z-index: 100;
+  width: 100% !important;
+  position: fixed;
+  background-color: $navbar-bg;
+  color: $nav-subitem-bg;
+}
+
+.nav-container-right {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  font-weight: bold;
+  font-size: .9em;
+  text-transform: uppercase;
+}
+
+.nav-container-right ul {
+  list-style: none;
+}
+.nav-container-right ul li {
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.nav-container-right ul li a {
+  color: $nav-subitem-bg;
+}
+
+.nav-container-right ul li a:hover {
+  color: #ccc;
+}
+
+.nav-container-left {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-container-left img {
+  width: 220px;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
 
 #toc > ul > li > a > span {
   float: right;
-  background-color: #2484FF;
   border-radius: 40px;
   width: 20px;
 }
 
 .toc-wrapper {
   transition: left 0.3s ease-in-out;
-
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
+  padding-top: 30px;
   z-index: 30;
   top: 0;
   left: 0;
@@ -64,7 +119,8 @@ a {
   width: $nav-width;
   background-color: $nav-bg;
   font-size: 13px;
-  font-weight: bold;
+  font-weight: bolder;
+  margin-top: 70px;
 
   // language selector for mobile devices
   .lang-selector {
@@ -157,7 +213,7 @@ a {
 
   // This is the currently selected ToC entry
   .toc-link.active {
-    background-color: $nav-active-bg;
+    border-left: 4px solid $nav-active-text;
     color: $nav-active-text;
   }
 
@@ -170,7 +226,6 @@ a {
   .toc-list-h2 {
     display: none;
     background-color: $nav-subitem-bg;
-    font-weight: 500;
   }
 
   .toc-h2 {
@@ -205,9 +260,9 @@ a {
     margin-top: 1em;
 
     li,a {
-      color: #ccc;
+      color: rgb(165, 165, 165);
       text-decoration: none;
-      font-weight: 200;
+      font-weight: 300;
       font-size: .9em;
     }
 
@@ -220,6 +275,7 @@ a {
 }
 
 .toc-link, .toc-footer li {
+  border-left: 4px solid transparent;
   padding: 0 $nav-padding 0 $nav-padding;
   display: block;
   overflow-x: hidden;
@@ -291,6 +347,7 @@ a {
     right: 0;
     top: 0;
     bottom: 0;
+    padding-top: 70px;
   }
 
   .lang-selector {
@@ -342,6 +399,7 @@ a {
   // to place content above the dark box
   position: relative;
   z-index: 30;
+  padding-top: 80px;
 
   &:after {
     content: '';
@@ -370,11 +428,10 @@ a {
   h1 {
     @extend %header-font;
     font-size: 25px;
-    padding-top: 0.5em;
+    padding-top: 80px;
     padding-bottom: 0.5em;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     background-color: #fdfdfd;
   }
@@ -390,7 +447,7 @@ a {
     margin-top: 4em;
     margin-bottom: 0;
     border-top: 1px solid #ccc;
-    padding-top: 1.2em;
+    padding-top: 80px;
     padding-bottom: 1.2em;
     background-image: linear-gradient(to bottom, rgba(#fff, 0.2), rgba(#fff, 0));
   }
@@ -428,6 +485,7 @@ a {
       line-height: 1.6;
       code {
         white-space: nowrap;
+        font-size: .9em;
       }
     }
 
@@ -475,6 +533,7 @@ a {
     background-color: rgba(0,0,0,0.05);
     padding: 3px;
     border-radius: 3px;
+    font-size: .9em;
     @extend %break-words;
     @extend %code-font;
   }
@@ -482,6 +541,7 @@ a {
   pre>code {
     background-color: transparent;
     padding: 0;
+    font-size: 1em;
   }
 
   aside {
@@ -537,10 +597,12 @@ a {
   &>div.highlight {
     clear:none;
   }
+  font-size: .9em;
 
   pre, blockquote {
     background-color: $code-bg;
     color: #fff;
+    overflow: auto;
 
     margin: 0;
     width: $examples-width;
@@ -573,6 +635,7 @@ a {
       background-color: $code-annotation-bg;
       padding: $code-annotation-padding 2em;
       color: #eee;
+      font-weight: bolder;
     }
   }
 }

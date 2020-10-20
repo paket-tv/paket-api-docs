@@ -6,6 +6,8 @@ The Paket Licenses API currently supports the following endpoints:
 
 ## GET /licenses
 
+> Get licenses example request 
+
 ```ruby
 require "uri"
 require "net/http"
@@ -16,7 +18,7 @@ https = Net::HTTP.new(url.host, url.port);
 https.use_ssl = true
 
 request = Net::HTTP::Get.new(url)
-request["Authorization"] = "<access_token>"
+request["Authorization"] = "eyJz9sdfsdfsdfsd"
 
 response = https.request(request)
 puts response.read_body
@@ -28,7 +30,7 @@ import mimetypes
 conn = http.client.HTTPSConnection("api.paket.tv")
 payload = ''
 headers = {
-  'Authorization': '<access_token>'
+  'Authorization': 'eyJz9sdfsdfsdfsd'
 }
 conn.request("GET", "/licenses", payload, headers)
 res = conn.getresponse()
@@ -38,12 +40,12 @@ print(data.decode("utf-8"))
 
 ```shell
 curl --location --request GET 'https://api.paket.tv/licenses' \
---header 'Authorization: <access_token>'
+--header 'Authorization: eyJz9sdfsdfsdfsd'
 ```
 
 ```javascript
 var myHeaders = new Headers();
-myHeaders.append("Authorization", "<access_token>");
+myHeaders.append("Authorization", "eyJz9sdfsdfsdfsd");
 
 var requestOptions = {
   method: 'GET',
@@ -63,7 +65,7 @@ OkHttpClient client = new OkHttpClient().newBuilder()
 Request request = new Request.Builder()
   .url("https://api.paket.tv/licenses")
   .method("GET", null)
-  .addHeader("Authorization", "<access_token>")
+  .addHeader("Authorization", "eyJz9sdfsdfsdfsd")
   .build();
 Response response = client.newCall(request).execute();
 ```
@@ -74,7 +76,7 @@ import Foundation
 var semaphore = DispatchSemaphore (value: 0)
 
 var request = URLRequest(url: URL(string: "https://api.paket.tv/licenses")!,timeoutInterval: Double.infinity)
-request.addValue("<access_token>", forHTTPHeaderField: "Authorization")
+request.addValue("eyJz9sdfsdfsdfsd", forHTTPHeaderField: "Authorization")
 
 request.httpMethod = "GET"
 
@@ -100,7 +102,7 @@ NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWit
   cachePolicy:NSURLRequestUseProtocolCachePolicy
   timeoutInterval:10.0];
 NSDictionary *headers = @{
-  @"Authorization": @"<access_token>"
+  @"Authorization": @"eyJz9sdfsdfsdfsd"
 };
 
 [request setAllHTTPHeaderFields:headers];
@@ -124,8 +126,7 @@ completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 ```
 
-> The above command returns JSON structured like this:  
-> <span style="color: green">`200 OK`</span>
+> Example response (200) 
 
 ```json
 {
@@ -163,7 +164,6 @@ dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
   ]
 }
 ```
-> If no licenses are available, API returns: <span style="color: green">`204 No Content`</span>
 
 The `/licenses` endpoint retrieves only the authenticated user's licenses to the requesting client's app.
 
