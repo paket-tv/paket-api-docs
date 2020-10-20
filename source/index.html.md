@@ -2,13 +2,13 @@
 title: Paket API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
-  - shell
-  - javascript
-  - ruby
-  - python
-  - java
-  - swift
-  - objective_c
+  - shell: cURL
+  - javascript: Javascript
+  - ruby: Ruby
+  - python: Python
+  - java: Java
+  - swift: Swift
+  - objective_c: Objective-C
 
 toc_footers:
   # - <a href='https:/publisher.paket.tv'>Sign In to the Publisher Portal</a>
@@ -80,6 +80,6 @@ Testing on Paket is done in the Production environment using test mode Client an
 
 Simply create one or more test mode Client and License objects within your App by selecting the "Test Mode" switch within the Publisher Portal. This will allow you to test your implementation using the test client.  
 
-**A test mode Client will retrieve all of the App's test mode licenses that are set to "Pending" status.**
+**A test mode Client will retrieve all of the App's test mode licenses that are set to status Pending.**
 
 When you are ready to deploy your app, replace the test mode client parameters with those of the production client.

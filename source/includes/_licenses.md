@@ -39,8 +39,9 @@ print(data.decode("utf-8"))
 ```
 
 ```shell
-curl --location --request GET 'https://api.paket.tv/licenses' \
---header 'Authorization: eyJz9sdfsdfsdfsd'
+curl https://api.paket.tv/licenses \
+  -X GET \
+  -H 'Authorization: eyJz9sdfsdfsdfsd'
 ```
 
 ```javascript
@@ -126,7 +127,7 @@ completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
 dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 ```
 
-> Example response (200) 
+> Example response <span style="float:right">200 OK</span>
 
 ```json
 {
@@ -136,7 +137,7 @@ dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
     {
       "item": {
         "license_type": "SINGLE",
-        "name": "Kidstream: Monthly Access",
+        "name": "Kidstream",
         "status": "ACTIVE",
         "renew_status": "RENEW",
         "renews_on": "2020-10-23T16:35:28+00:00",
@@ -173,44 +174,22 @@ The `/licenses` endpoint retrieves only the authenticated user's licenses to the
 
 **Authorization** OAuth 2.0
 
-### Response Object
+License types currently available include:
 
-Attribute | Type | Description
---------- | ------- | -----------
-`plan_id` | <small>string</small> | The authenticated user's plan ID
-`client_id` | <small>string</small> | The requesting client's ID
-`items` | <small>array</small> | An array of plan item objects
+- `SINGLE` - The license belongs to a single application item
+- `BUNDLE` - The license belongs to a bundle item
 
-### Plan Item Object
+The `status` attribute represents the current status of the item, whereas the `renew_status` indicates if the item is slated for renewal.
 
-Attribute | Type | Description
---------- | ------- | -----------
-`item` | <small>object</small> | An item in the authenticated user's plan containing a license to the requesting app
-`license` | <small>object</small> | The license associated with the plan item
+The item's available statuses are:
 
-### Item Object
+- `ACTIVE` - The item is currently active and in good standing
+- `OVERDUE` - The item is active, though there is a payment processing issue pending resolution
+- `CANCELLED` - The item has been cancelled
 
-Attribute | Type | Description
---------- | ------- | -----------
-`license_type` | <small>string</small> | Whether the license is a la carte (`SINGLE`) or part of a bundle (`BUNDLE`)
-`name` | <small>string</small> | The name of the app and associated license
-`status` | <small>string</small> | The current status of the item and associated license (`ACTIVE`,`OVERDUE`, or `CANCELLED`)
-`renew_status` | <small>string</small> | The renewal status of the item and associated license (`RENEW`, or `CANCEL`)
-`renews_on` | <small>string</small> | The date on which the item is scheduled to renew
-`interval_length` | <small>integer</small> | The interval at which the subscription renews
-`interval_unit` | <small>string</small> | The unit description for the interval_length parameter
-`billing_cycle_anchor` | <small>string</small> | The anchor date to which the subscription is renewed
-`date_added` | <small>string</small> | The date on which the item was added to the authenticated user's plan
-`trial` | <small>boolean</small> | Whether or not the item was originally added as part of a trial
-`trial_duration` | <small>integer</small> | The original trial duration in days
-`trial_reset` | <small>integer</small> | The trial reset period in days
+The item's available renew statuses are:
 
-### License Object
+- `RENEW` - The item is scheduled to renew on the `renews_on` date
+- `CANCEL` - The item is scheduled to be cancelled on the `renews_on` date
 
-Attribute | Type | Description
---------- | ------- | -----------
-`id` | <small>string</small> | The Paket assigned license ID
-`internal_id` | <small>string</small> | The service provider assigned license ID
-`name` | <small>string</small> | The name of the license
-`description` | <small>string</small> | The license description
-`locales` | <small>array</small> | Array of license locale objects containing an ISO 3166 `name` and `country_code`
+The Paket API returns all `ACTIVE` and `OVERDUE` items and returns the previous 12 months' `CANCELLED` items.

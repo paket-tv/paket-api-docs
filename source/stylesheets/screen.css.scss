@@ -78,10 +78,12 @@ a {
 
 .nav-container-right ul li a {
   color: $nav-subitem-bg;
+  transition: .5s;
 }
 
 .nav-container-right ul li a:hover {
   color: #ccc;
+  transition: .5s;
 }
 
 .nav-container-left {
@@ -94,6 +96,16 @@ a {
 
 .nav-container-left img {
   width: 220px;
+}
+
+.nav-container-left a:hover {
+  opacity: .8;
+  transition: .7s;
+}
+
+.nav-container-left a {
+  opacity: 1;
+  transition: .7s;
 }
 
 ////////////////////////////////////////////////////////////////////////////////

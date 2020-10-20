@@ -61,7 +61,125 @@ curl https://auth.paket.tv/oauth2/token \
   &client_id=2g8die7vki53974mp72sa4fgp5&redirect_uri=https://example.com/oauth/callback'
 ```
 
-> After a successful request, a valid access token will be returned in the response:
+```javascript
+var urlencoded = new URLSearchParams();
+urlencoded.append("grant_type", "authorization_code");
+urlencoded.append("code", "4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6");
+urlencoded.append("client_id", "2g8die7vki53974mp72sa4fgp5");
+urlencoded.append("redirect_uri", "https://example.com/oauth/callback");
+
+var requestOptions = {
+  method: 'POST',
+  body: urlencoded,
+  redirect: 'follow'
+};
+
+fetch("https://auth.paket.tv/oauth2/token", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+
+```ruby
+require "uri"
+require "net/http"
+
+url = URI("https://auth.paket.tv/oauth2/token")
+
+https = Net::HTTP.new(url.host, url.port);
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request.body = "grant_type=authorization_code&code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&client_id=2g8die7vki53974mp72sa4fgp5&redirect_uri=https%3A//example.com/oauth/callback"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```python
+import http.client
+import mimetypes
+conn = http.client.HTTPSConnection("auth.paket.tv")
+payload = 'grant_type=authorization_code&code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&client_id=2g8die7vki53974mp72sa4fgp5&redirect_uri=https%3A//example.com/oauth/callback'
+headers = {}
+conn.request("POST", "/oauth2/token", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("text/plain");
+RequestBody body = RequestBody.create(mediaType, "grant_type=authorization_code&code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&client_id=2g8die7vki53974mp72sa4fgp5&redirect_uri=https://example.com/oauth/callback");
+Request request = new Request.Builder()
+  .url("https://auth.paket.tv/oauth2/token")
+  .method("POST", body)
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```swift
+import Foundation
+
+var semaphore = DispatchSemaphore (value: 0)
+
+let parameters = "grant_type=authorization_code&code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&client_id=2g8die7vki53974mp72sa4fgp5&redirect_uri=https%3A//example.com/oauth/callback"
+let postData =  parameters.data(using: .utf8)
+
+var request = URLRequest(url: URL(string: "https://auth.paket.tv/oauth2/token")!,timeoutInterval: Double.infinity)
+request.httpMethod = "POST"
+request.httpBody = postData
+
+let task = URLSession.shared.dataTask(with: request) { data, response, error in 
+  guard let data = data else {
+    print(String(describing: error))
+    return
+  }
+  print(String(data: data, encoding: .utf8)!)
+  semaphore.signal()
+}
+
+task.resume()
+semaphore.wait()
+```
+
+```objective_c
+#import <Foundation/Foundation.h>
+
+dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://auth.paket.tv/oauth2/token"]
+  cachePolicy:NSURLRequestUseProtocolCachePolicy
+  timeoutInterval:10.0];
+NSMutableData *postData = [[NSMutableData alloc] initWithData:[@"grant_type=authorization_code" dataUsingEncoding:NSUTF8StringEncoding]];
+[postData appendData:[@"&code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6" dataUsingEncoding:NSUTF8StringEncoding]];
+[postData appendData:[@"&client_id=2g8die7vki53974mp72sa4fgp5" dataUsingEncoding:NSUTF8StringEncoding]];
+[postData appendData:[@"&redirect_uri=https://example.com/oauth/callback" dataUsingEncoding:NSUTF8StringEncoding]];
+[request setHTTPBody:postData];
+
+[request setHTTPMethod:@"POST"];
+
+NSURLSession *session = [NSURLSession sharedSession];
+NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
+completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+  if (error) {
+    NSLog(@"%@", error);
+  } else {
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+    NSError *parseError = nil;
+    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+    NSLog(@"%@",responseDictionary);
+    dispatch_semaphore_signal(sema);
+  }
+}];
+[dataTask resume];
+dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+```
+
+
+> After a successful request, a valid access token will be returned in the response:  <span style="float:right">200 OK</span>
 
 ```json
 { 
@@ -103,11 +221,126 @@ After you have a valid access token, you can make your first API call by includi
 curl https://auth.paket.tv/oauth2/token \
   -X POST \
   -H 'Content-Type: application/x-www-form-urlencoded' \
-  -d 'grant_type=refresh_token&refresh_token=...dn43ud8uj32nk2je
+  -d 'grant_type=refresh_token&refresh_token=dn43ud8uj32nk2je
   &client_id=2g8die7vki53974mp72sa4fgp5'
 ```
 
-> After a successful request, a valid access token will be returned in the response:
+```javascript
+var urlencoded = new URLSearchParams();
+urlencoded.append("grant_type", "refresh_token");
+urlencoded.append("refresh_token", "dn43ud8uj32nk2je");
+urlencoded.append("client_id", "2g8die7vki53974mp72sa4fgp5");
+
+var requestOptions = {
+  method: 'POST',
+  body: urlencoded,
+  redirect: 'follow'
+};
+
+fetch("https://auth.paket.tv/oauth2/token", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+
+```ruby
+require "uri"
+require "net/http"
+
+url = URI("https://auth.paket.tv/oauth2/token")
+
+https = Net::HTTP.new(url.host, url.port);
+https.use_ssl = true
+
+request = Net::HTTP::Post.new(url)
+request.body = "grant_type=refresh_token&refresh_token=dn43ud8uj32nk2je&client_id=2g8die7vki53974mp72sa4fgp5"
+
+response = https.request(request)
+puts response.read_body
+```
+
+```python
+import http.client
+import mimetypes
+conn = http.client.HTTPSConnection("auth.paket.tv")
+payload = 'grant_type=refresh_token&refresh_token=dn43ud8uj32nk2je&client_id=2g8die7vki53974mp72sa4fgp5'
+headers = {}
+conn.request("POST", "/oauth2/token", payload, headers)
+res = conn.getresponse()
+data = res.read()
+print(data.decode("utf-8"))
+```
+
+```java
+OkHttpClient client = new OkHttpClient().newBuilder()
+  .build();
+MediaType mediaType = MediaType.parse("text/plain");
+RequestBody body = RequestBody.create(mediaType, "grant_type=refresh_token&refresh_token=dn43ud8uj32nk2je&client_id=2g8die7vki53974mp72sa4fgp5");
+Request request = new Request.Builder()
+  .url("https://auth.paket.tv/oauth2/token")
+  .method("POST", body)
+  .build();
+Response response = client.newCall(request).execute();
+```
+
+```swift
+import Foundation
+
+var semaphore = DispatchSemaphore (value: 0)
+
+let parameters = "grant_type=refresh_token&refresh_token=dn43ud8uj32nk2je&client_id=2g8die7vki53974mp72sa4fgp5"
+let postData =  parameters.data(using: .utf8)
+
+var request = URLRequest(url: URL(string: "https://auth.paket.tv/oauth2/token")!,timeoutInterval: Double.infinity)
+request.httpMethod = "POST"
+request.httpBody = postData
+
+let task = URLSession.shared.dataTask(with: request) { data, response, error in 
+  guard let data = data else {
+    print(String(describing: error))
+    return
+  }
+  print(String(data: data, encoding: .utf8)!)
+  semaphore.signal()
+}
+
+task.resume()
+semaphore.wait()
+```
+
+```objective_c
+#import <Foundation/Foundation.h>
+
+dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://auth.paket.tv/oauth2/token"]
+  cachePolicy:NSURLRequestUseProtocolCachePolicy
+  timeoutInterval:10.0];
+NSMutableData *postData = [[NSMutableData alloc] initWithData:[@"grant_type=refresh_token" dataUsingEncoding:NSUTF8StringEncoding]];
+[postData appendData:[@"&refresh_token=dn43ud8uj32nk2je" dataUsingEncoding:NSUTF8StringEncoding]];
+[postData appendData:[@"&client_id=2g8die7vki53974mp72sa4fgp5" dataUsingEncoding:NSUTF8StringEncoding]];
+[request setHTTPBody:postData];
+
+[request setHTTPMethod:@"POST"];
+
+NSURLSession *session = [NSURLSession sharedSession];
+NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
+completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+  if (error) {
+    NSLog(@"%@", error);
+  } else {
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+    NSError *parseError = nil;
+    NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:&parseError];
+    NSLog(@"%@",responseDictionary);
+    dispatch_semaphore_signal(sema);
+  }
+}];
+[dataTask resume];
+dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+```
+
+> After a successful request, a valid access token will be returned in the response:  <span style="float:right">200 OK</span>
 
 ```json
 { 

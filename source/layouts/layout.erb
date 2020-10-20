@@ -58,11 +58,12 @@ under the License.
   <body class="<%= page_classes %>" data-languages="<%=h language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>">
     <div class="nav">
         <div class="nav-container-left">
-          <%= image_tag('logo.png') %>
+          <a href='/'><%= image_tag('logo.png') %></a>
         </div>
         <div class="nav-container-right">
           <ul>
             <li><a href="https://publisher.paket.tv/console" target="_blank">Console</a></li>
+            <li><a href="https://publisher.paket.tv/console/apps" target="_blank">My Apps</a></li>
             <li><a href="https://publisher.paket.tv/signup" target="_blank">Request Access</a></li>
           </ul>
         </div>
