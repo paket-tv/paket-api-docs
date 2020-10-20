@@ -2,11 +2,36 @@
 <!doctype html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH5B1MYNSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GH5B1MYNSS');
+    </script> 
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <!-- Primary Meta Tags -->
+    <title>Paket API Reference</title>
+    <meta name="title" content=Paket API Reference>
+    <meta name="description" content="Welcome to the Paket API Docs. Start here to incorporate Paket into your subscription or ad-supported streaming media service.">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.paket.tv">
+    <meta property="og:title" content=Paket API Reference>
+    <meta property="og:description" content="Welcome to the Paket API Docs. Start here to incorporate Paket into your subscription or ad-supported streaming media service.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.paket.tv/">
+    <meta property="twitter:title" content=Paket API Reference>
+    <meta property="twitter:description" content="Welcome to the Paket API Docs. Start here to incorporate Paket into your subscription or ad-supported streaming media service.">
+    
+    <link href="images/favicon-7ff70104.ico" rel="icon" type="image/ico" />
     <style media="screen">
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
@@ -279,52 +304,80 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-ecf4d556.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all-e9bde216.js"></script>
+      <script src="javascripts/all_nosearch-ea811c3e.js"></script>
 
     <script>
       $(function() { setupCodeCopy(); });
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;javascript&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;java&quot;,&quot;swift&quot;,&quot;objective_c&quot;]">
+    <div class="nav">
+        <div class="nav-container-left">
+          <a href='/'><img src="images/logo-b07af12f.png" alt="" /></a>
+        </div>
+        <div class="nav-container-right">
+          <ul>
+            <li><a href="https://publisher.paket.tv/console" target="_blank">Console</a></li>
+            <li><a href="https://publisher.paket.tv/console/apps" target="_blank">My Apps</a></li>
+            <li><a href="https://publisher.paket.tv/signup" target="_blank">Request Access</a></li>
+          </ul>
+        </div>
+    </div>
     <a href="#" id="nav-button">
       <span>
-        NAV
         <img src="images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
         <div class="lang-selector">
-              <a href="#" data-language-name="shell">shell</a>
-              <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
-              <a href="#" data-language-name="javascript">javascript</a>
+              <a href="#" data-language-name="shell">cURL</a>
+              <a href="#" data-language-name="javascript">Javascript</a>
+              <a href="#" data-language-name="ruby">Ruby</a>
+              <a href="#" data-language-name="python">Python</a>
+              <a href="#" data-language-name="java">Java</a>
+              <a href="#" data-language-name="swift">Swift</a>
+              <a href="#" data-language-name="objective_c">Objective-C</a>
         </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
-          </li>
-          <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting Started">Getting Started</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#statuses" class="toc-h2 toc-link" data-title="Statuses">Statuses</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#price-tiers" class="toc-h2 toc-link" data-title="Price Tiers">Price Tiers</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#testing" class="toc-h2 toc-link" data-title="Testing">Testing</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#integrating" class="toc-h2 toc-link" data-title="Integrating">Integrating</a>
+                  </li>
+                  <li>
+                    <a href="#refresh-tokens" class="toc-h2 toc-link" data-title="Refresh Tokens">Refresh Tokens</a>
+                  </li>
+                  <li>
+                    <a href="#revoking-access" class="toc-h2 toc-link" data-title="Revoking Access">Revoking Access</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#licenses" class="toc-h1 toc-link" data-title="Licenses">Licenses</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-licenses" class="toc-h2 toc-link" data-title="GET /licenses">GET /licenses</a>
                   </li>
               </ul>
           </li>
@@ -332,199 +385,694 @@
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+        <ul class="copyright">
+            <li><a>© 2020-2021 Paket Media, Inc.</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>Welcome to Paket. Paket is a utility platform for streaming media services that unifies authentication, billing, and discovery into a seamless and frictionless experience for users.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>While nearly all of the Platform&#39;s business logic (including account creation, billing, recurring payments, etc.) happens on Paket&#39;s end, streaming service providers will need to integrate with Paket&#39;s API to be able to authenticate users and to access the authenticated user&#39;s entitlements to the respective service via the Paket API.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
+<p>Also, please note that this documentation illustrates how to call the API using the standard methods employed by various software development frameworks. Framework-specific examples will be updated with community SDK examples as such SDKs are warranted and made available.</p>
+<h1 id='getting-started'>Getting Started</h1>
+<blockquote>
+<p>API Endpoint  </p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>  https://api.paket.tv/v1/
+</code></pre></div>
+<p>Before we begin, it&#39;s important to understand the key concepts and taxonomy of the platform, each of which can be configured in the <a href="https://www.paket.tv">Paket Publisher Portal</a>:</p>
+
+<p><strong>Companies</strong>: The Company is the primary object to which Apps are associated. This is where the business details are configured. In most situations, an account will have only one Company;</p>
+
+<p><strong>Apps</strong>: The App is the primary object to which Clients and Licenses are associated. This is the high-level representation of your service, its consumer-facing title (e.g., Hulu), description, and supporting metadata;</p>
+
+<p><strong>Licenses</strong>: The License object represents an entitlement offered via your App (e.g., Limited Ads at $5.99 / mo, No Ads at $9.99 / mo, etc.), its pricing, and regional availability; and</p>
+
+<p><strong>Clients</strong>: The Client object contains the platform or device-specific Paket auth (OAuth2) configuration for a service&#39;s discrete user-facing application (e.g., Roku, iOS, Android, etc.).</p>
+
+<p>While this documentation illustrates how to use the Paket API, service providers are encouraged to configure additional logic on their end (e.g., creating a local user from the authenticated Paket user) so as to deliver the optimal experience to the end user. </p>
+<h2 id='statuses'>Statuses</h2>
+<p>The following Statuses are assignable to the App and License models:</p>
+
+<table><thead>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Draft</td>
+<td><strong>Default.</strong> The object is not yet available to end users.</td>
+</tr>
+<tr>
+<td>Pending</td>
+<td>Publisher has deployed the object and is pending Paket approval. The object is not available to end users.</td>
+</tr>
+<tr>
+<td>Live</td>
+<td>Publisher has deployed the object and Paket has approved it. The object is available to end users.</td>
+</tr>
+<tr>
+<td>Inactive</td>
+<td>Publisher has hidden a Paket-approved object that has active subscribers. The object is not available to new end users.</td>
+</tr>
+</tbody></table>
+<h2 id='price-tiers'>Price Tiers</h2>
+<p>Paket uses price tiers to ensure pricing consistency and predictability across regions and countries. Pricing and regional availability are assigned to the <code>License</code> object. You may create as many licenses as is necessary to ensure that your regional pricing is accurately represented.</p>
+
+<aside class="notice">
+  Price tier changes on Live licenses can be scheduled via request to Paket and require a min 30 days lead time before it will be applied to existing subscribers.
+</aside>
+<h2 id='testing'>Testing</h2>
+<p>Testing on Paket is done in the Production environment using test mode Client and License objects. This ensures that you are testing your API integration in the very environment to which you will be deploying your App. </p>
+
+<p>Simply create one or more test mode Client and License objects within your App by selecting the &quot;Test Mode&quot; switch within the Publisher Portal. This will allow you to test your implementation using the test client.  </p>
+
+<p><strong>A test mode Client will retrieve all of the App&#39;s test mode licenses that are set to status Pending.</strong></p>
+
+<p>When you are ready to deploy your app, replace the test mode client parameters with those of the production client.</p>
 <h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>The Paket API employs user access tokens to allow access to the API. Access tokens are issued to the requesting client on successful user authentication using the Paket OAuth2 authorization code grant flow.  </p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>In nearly all cases, this flow will work with your existing web, mobile, and input-restricted client flows. If needed, Paket offers its own code-based flow for input-restricted devices. If you&#39;d like to learn more, please contact us.  </p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
-
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
+<p>While not officially tested, the authorization flow should work with most framework-specific Oauth2 clients - including those with full PKCE support.</p>
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+  For authorizing users in native apps and in keeping with OAuth2 <a href='https://www.rfc-editor.org/rfc/rfc8252.txt' target='_blank'>best practices</a>, please perform the authorization request in an external user agent (i.e., browser) rather than an embedded user agent.
 </aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<h2 id='integrating'>Integrating</h2>
+<p>Before authenticating with Paket, you’ll need to configure a new Client under your App settings via the publisher console. Once configured, note the following authentication server endpoints:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<ul>
+<li><strong>AUTHORIZE</strong> Endpoint: <code>https://auth.paket.tv/oauth2/authorize</code><br></li>
+<li><strong>TOKEN</strong> Endpoint: <code>https://auth.paket.tv/oauth2/token</code><br></li>
+<li><strong>LOGOUT</strong> Endpoint: <code>https://auth.paket.tv/logout</code><br></li>
+</ul>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+<p>To integrate your service with Paket, use the following flow:</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
+<blockquote>
+<p>A basic example of the constructed URL:  </p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>GET https://auth.paket.tv/oauth2/authorize?response_type=code
+&amp;client_id=2g8die7vki53974mp72sa4fgp5&amp;redirect_uri=www.example.com/oauth/callback
+</code></pre></div><h3 id='1-redirect-users-to-request-paket-access'>1. Redirect users to request Paket access</h3>
+<p><code>GET https://auth.paket.tv/oauth2/authorize?response_type=code&amp;client_id=CLIENT_ID&amp;redirect_uri=REDIRECT_URI</code></p>
+
+<p>When redirecting a user to Paket to authorize access to your application, you’ll need to construct the authorization URL with the following parameters:</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>response_type</code></td>
+<td>string</td>
+<td><strong>Required</strong> Value <code>code</code></td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>string</td>
+<td><strong>Required</strong> The requesting client&#39;s ID as specified in the publisher portal</td>
+</tr>
+<tr>
+<td><code>redirect_uri</code></td>
+<td>string</td>
+<td><strong>Required</strong> The client Callback URL as specified in the publisher portal</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+<td><strong>Optional</strong> An unguessable random string, used to protect against cross-site request forgery attacks</td>
+</tr>
+<tr>
+<td><code>code_challenge_method</code></td>
+<td>string</td>
+<td><strong>Optional</strong> When using PKCE (recommended) Paket supports only <code>S256</code></td>
+</tr>
+<tr>
+<td><code>code_challenge</code></td>
+<td>string</td>
+<td><strong>Optional</strong> Required only when the <code>code_challenge_method</code> is specified</td>
+</tr>
+</tbody></table>
+<h3 id='2-paket-redirects-back-to-your-site'>2. Paket redirects back to your site</h3>
+<p>Once the user logs in, Paket will redirect them back to your <code>redirect_uri</code> with a temporary <code>code</code> parameter. If you specified a<br>
+<code>state</code> parameter in Step 1, it will be returned as well. The <code>state</code> parameters should always match. If they do not, the request should not be trusted.</p>
+
+<p>Example of the redirect back to your URL:</p>
+
+<p><code>GET https://www.example.com/oauth/callback?code=b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6</code>  </p>
+<h3 id='3-exchange-code-for-an-access-token'>3. Exchange code for an access token</h3><div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://auth.paket.tv/oauth2/token <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'grant_type=authorization_code&amp;code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6
+  &amp;client_id=2g8die7vki53974mp72sa4fgp5&amp;redirect_uri=https://example.com/oauth/callback'</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">urlencoded</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URLSearchParams</span><span class="p">();</span>
+<span class="nx">urlencoded</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">grant_type</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">authorization_code</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">urlencoded</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">urlencoded</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">client_id</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">2g8die7vki53974mp72sa4fgp5</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">urlencoded</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">redirect_uri</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">https://example.com/oauth/callback</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">requestOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="nx">urlencoded</span><span class="p">,</span>
+  <span class="na">redirect</span><span class="p">:</span> <span class="dl">'</span><span class="s1">follow</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://auth.paket.tv/oauth2/token</span><span class="dl">"</span><span class="p">,</span> <span class="nx">requestOptions</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"uri"</span>
+<span class="nb">require</span> <span class="s2">"net/http"</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://auth.paket.tv/oauth2/token"</span><span class="p">)</span>
+
+<span class="n">https</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">);</span>
+<span class="n">https</span><span class="p">.</span><span class="nf">use_ssl</span> <span class="o">=</span> <span class="kp">true</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"grant_type=authorization_code&amp;code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&amp;client_id=2g8die7vki53974mp72sa4fgp5&amp;redirect_uri=https%3A//example.com/oauth/callback"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">https</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">http.client</span>
+<span class="kn">import</span> <span class="nn">mimetypes</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s">"auth.paket.tv"</span><span class="p">)</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s">'grant_type=authorization_code&amp;code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&amp;client_id=2g8die7vki53974mp72sa4fgp5&amp;redirect_uri=https%3A//example.com/oauth/callback'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">conn</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="s">"/oauth2/token"</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OkHttpClient</span><span class="o">().</span><span class="na">newBuilder</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="nc">MediaType</span> <span class="n">mediaType</span> <span class="o">=</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"text/plain"</span><span class="o">);</span>
+<span class="nc">RequestBody</span> <span class="n">body</span> <span class="o">=</span> <span class="nc">RequestBody</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">mediaType</span><span class="o">,</span> <span class="s">"grant_type=authorization_code&amp;code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&amp;client_id=2g8die7vki53974mp72sa4fgp5&amp;redirect_uri=https://example.com/oauth/callback"</span><span class="o">);</span>
+<span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">url</span><span class="o">(</span><span class="s">"https://auth.paket.tv/oauth2/token"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">,</span> <span class="n">body</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="nc">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">newCall</span><span class="o">(</span><span class="n">request</span><span class="o">).</span><span class="na">execute</span><span class="o">();</span>
+</code></pre></div><div class="highlight"><pre class="highlight swift tab-swift"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="k">var</span> <span class="nv">semaphore</span> <span class="o">=</span> <span class="kt">DispatchSemaphore</span> <span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="s">"grant_type=authorization_code&amp;code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6&amp;client_id=2g8die7vki53974mp72sa4fgp5&amp;redirect_uri=https%3A//example.com/oauth/callback"</span>
+<span class="k">let</span> <span class="nv">postData</span> <span class="o">=</span>  <span class="n">parameters</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://auth.paket.tv/oauth2/token"</span><span class="p">)</span><span class="o">!</span><span class="p">,</span><span class="nv">timeoutInterval</span><span class="p">:</span> <span class="kt">Double</span><span class="o">.</span><span class="n">infinity</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">httpMethod</span> <span class="o">=</span> <span class="s">"POST"</span>
+<span class="n">request</span><span class="o">.</span><span class="n">httpBody</span> <span class="o">=</span> <span class="n">postData</span>
+
+<span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">dataTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span> 
+  <span class="k">guard</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">))</span>
+    <span class="k">return</span>
+  <span class="p">}</span>
+  <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+  <span class="n">semaphore</span><span class="o">.</span><span class="nf">signal</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">task</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+<span class="n">semaphore</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight objective_c tab-objective_c"><code><span class="cp">#import &lt;Foundation/Foundation.h&gt;
+</span>
+<span class="n">dispatch_semaphore_t</span> <span class="n">sema</span> <span class="o">=</span> <span class="n">dispatch_semaphore_create</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">NSMutableURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableURLRequest</span> <span class="nf">requestWithURL</span><span class="p">:[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="s">@"https://auth.paket.tv/oauth2/token"</span><span class="p">]</span>
+  <span class="nl">cachePolicy:</span><span class="n">NSURLRequestUseProtocolCachePolicy</span>
+  <span class="nl">timeoutInterval:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">];</span>
+<span class="n">NSMutableData</span> <span class="o">*</span><span class="n">postData</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableData</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithData</span><span class="p">:[</span><span class="s">@"grant_type=authorization_code"</span> <span class="nf">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">postData</span> <span class="nf">appendData</span><span class="p">:[</span><span class="s">@"&amp;code=4b33b3e29-9a68-46ab-ae37-f2a05bf9d4b6"</span> <span class="nf">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">postData</span> <span class="nf">appendData</span><span class="p">:[</span><span class="s">@"&amp;client_id=2g8die7vki53974mp72sa4fgp5"</span> <span class="nf">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">postData</span> <span class="nf">appendData</span><span class="p">:[</span><span class="s">@"&amp;redirect_uri=https://example.com/oauth/callback"</span> <span class="nf">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">request</span> <span class="nf">setHTTPBody</span><span class="p">:</span><span class="n">postData</span><span class="p">];</span>
+
+<span class="p">[</span><span class="n">request</span> <span class="nf">setHTTPMethod</span><span class="p">:</span><span class="s">@"POST"</span><span class="p">];</span>
+
+<span class="n">NSURLSession</span> <span class="o">*</span><span class="n">session</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLSession</span> <span class="nf">sharedSession</span><span class="p">];</span>
+<span class="n">NSURLSessionDataTask</span> <span class="o">*</span><span class="n">dataTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">session</span> <span class="nf">dataTaskWithRequest</span><span class="p">:</span><span class="n">request</span>
+<span class="nl">completionHandler:</span><span class="o">^</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="n">httpResponse</span> <span class="o">=</span> <span class="p">(</span><span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="p">)</span> <span class="n">response</span><span class="p">;</span>
+    <span class="n">NSError</span> <span class="o">*</span><span class="n">parseError</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">responseDictionary</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSJSONSerialization</span> <span class="nf">JSONObjectWithData</span><span class="p">:</span><span class="n">data</span> <span class="nf">options</span><span class="p">:</span><span class="mi">0</span> <span class="n">error</span><span class="o">:&amp;</span><span class="n">parseError</span><span class="p">];</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span><span class="n">responseDictionary</span><span class="p">);</span>
+    <span class="n">dispatch_semaphore_signal</span><span class="p">(</span><span class="n">sema</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}];</span>
+<span class="p">[</span><span class="n">dataTask</span> <span class="nf">resume</span><span class="p">];</span>
+<span class="n">dispatch_semaphore_wait</span><span class="p">(</span><span class="n">sema</span><span class="p">,</span> <span class="n">DISPATCH_TIME_FOREVER</span><span class="p">);</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:</p>
+<p>After a successful request, a valid access token will be returned in the response:  <span style="float:right">200 OK</span></p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
+  </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJz9sdfsdfsdfsd"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"refresh_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dn43ud8uj32nk2je"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"id_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dmcxd329ujdmkemkd349r"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
+<p>After you have received the temporary <code>code</code>, you can exchange it for valid access and refresh tokens. This can be done by making a POST call to the TOKEN Endpoint:</p>
+
+<p><code>POST https://auth.paket.tv/oauth2/token</code>  </p>
+
+<p>With the following parameters:  </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>grant_type</code></td>
+<td>string</td>
+<td><strong>Required</strong> Value <code>authorization_code</code></td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td>string</td>
+<td><strong>Required</strong> The <code>code</code> query parameter from Step 2</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>string</td>
+<td><strong>Required</strong> The requesting client&#39;s ID as specified in the publisher portal</td>
+</tr>
+<tr>
+<td><code>redirect_uri</code></td>
+<td>string</td>
+<td><strong>Required</strong> Must be the same <code>redirect_uri</code> that was used in Step 1</td>
+</tr>
+<tr>
+<td><code>code_verifier</code></td>
+<td>string</td>
+<td><strong>Optional</strong> Required only if the authorization code was requested with PKCE.</td>
+</tr>
+</tbody></table>
+
+<p>And the following request headers:</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Content-Type</code></td>
+<td>string</td>
+<td><code>application/x-www-form-urlencoded</code></td>
+</tr>
+</tbody></table>
+<h3 id='4-make-an-api-call'>4. Make an API call</h3>
+<p>After you have a valid access token, you can make your first API call by including the <code>access_token</code> as the <code>Authorization</code> header value.</p>
+<h2 id='refresh-tokens'>Refresh Tokens</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://auth.paket.tv/oauth2/token <span class="se">\</span>
+  <span class="nt">-X</span> POST <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Content-Type: application/x-www-form-urlencoded'</span> <span class="se">\</span>
+  <span class="nt">-d</span> <span class="s1">'grant_type=refresh_token&amp;refresh_token=dn43ud8uj32nk2je
+  &amp;client_id=2g8die7vki53974mp72sa4fgp5'</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">urlencoded</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">URLSearchParams</span><span class="p">();</span>
+<span class="nx">urlencoded</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">grant_type</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">refresh_token</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">urlencoded</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">refresh_token</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">dn43ud8uj32nk2je</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">urlencoded</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">client_id</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">2g8die7vki53974mp72sa4fgp5</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">requestOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">POST</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">body</span><span class="p">:</span> <span class="nx">urlencoded</span><span class="p">,</span>
+  <span class="na">redirect</span><span class="p">:</span> <span class="dl">'</span><span class="s1">follow</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://auth.paket.tv/oauth2/token</span><span class="dl">"</span><span class="p">,</span> <span class="nx">requestOptions</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre></div><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"uri"</span>
+<span class="nb">require</span> <span class="s2">"net/http"</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://auth.paket.tv/oauth2/token"</span><span class="p">)</span>
+
+<span class="n">https</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">);</span>
+<span class="n">https</span><span class="p">.</span><span class="nf">use_ssl</span> <span class="o">=</span> <span class="kp">true</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Post</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span><span class="p">.</span><span class="nf">body</span> <span class="o">=</span> <span class="s2">"grant_type=refresh_token&amp;refresh_token=dn43ud8uj32nk2je&amp;client_id=2g8die7vki53974mp72sa4fgp5"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">https</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">http.client</span>
+<span class="kn">import</span> <span class="nn">mimetypes</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s">"auth.paket.tv"</span><span class="p">)</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s">'grant_type=refresh_token&amp;refresh_token=dn43ud8uj32nk2je&amp;client_id=2g8die7vki53974mp72sa4fgp5'</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">conn</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">"POST"</span><span class="p">,</span> <span class="s">"/oauth2/token"</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OkHttpClient</span><span class="o">().</span><span class="na">newBuilder</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="nc">MediaType</span> <span class="n">mediaType</span> <span class="o">=</span> <span class="nc">MediaType</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">"text/plain"</span><span class="o">);</span>
+<span class="nc">RequestBody</span> <span class="n">body</span> <span class="o">=</span> <span class="nc">RequestBody</span><span class="o">.</span><span class="na">create</span><span class="o">(</span><span class="n">mediaType</span><span class="o">,</span> <span class="s">"grant_type=refresh_token&amp;refresh_token=dn43ud8uj32nk2je&amp;client_id=2g8die7vki53974mp72sa4fgp5"</span><span class="o">);</span>
+<span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">url</span><span class="o">(</span><span class="s">"https://auth.paket.tv/oauth2/token"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"POST"</span><span class="o">,</span> <span class="n">body</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="nc">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">newCall</span><span class="o">(</span><span class="n">request</span><span class="o">).</span><span class="na">execute</span><span class="o">();</span>
+</code></pre></div><div class="highlight"><pre class="highlight swift tab-swift"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="k">var</span> <span class="nv">semaphore</span> <span class="o">=</span> <span class="kt">DispatchSemaphore</span> <span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="s">"grant_type=refresh_token&amp;refresh_token=dn43ud8uj32nk2je&amp;client_id=2g8die7vki53974mp72sa4fgp5"</span>
+<span class="k">let</span> <span class="nv">postData</span> <span class="o">=</span>  <span class="n">parameters</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">using</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://auth.paket.tv/oauth2/token"</span><span class="p">)</span><span class="o">!</span><span class="p">,</span><span class="nv">timeoutInterval</span><span class="p">:</span> <span class="kt">Double</span><span class="o">.</span><span class="n">infinity</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="n">httpMethod</span> <span class="o">=</span> <span class="s">"POST"</span>
+<span class="n">request</span><span class="o">.</span><span class="n">httpBody</span> <span class="o">=</span> <span class="n">postData</span>
+
+<span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">dataTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span> 
+  <span class="k">guard</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">))</span>
+    <span class="k">return</span>
+  <span class="p">}</span>
+  <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+  <span class="n">semaphore</span><span class="o">.</span><span class="nf">signal</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">task</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+<span class="n">semaphore</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight objective_c tab-objective_c"><code><span class="cp">#import &lt;Foundation/Foundation.h&gt;
+</span>
+<span class="n">dispatch_semaphore_t</span> <span class="n">sema</span> <span class="o">=</span> <span class="n">dispatch_semaphore_create</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">NSMutableURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableURLRequest</span> <span class="nf">requestWithURL</span><span class="p">:[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="s">@"https://auth.paket.tv/oauth2/token"</span><span class="p">]</span>
+  <span class="nl">cachePolicy:</span><span class="n">NSURLRequestUseProtocolCachePolicy</span>
+  <span class="nl">timeoutInterval:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">];</span>
+<span class="n">NSMutableData</span> <span class="o">*</span><span class="n">postData</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableData</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">initWithData</span><span class="p">:[</span><span class="s">@"grant_type=refresh_token"</span> <span class="nf">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">postData</span> <span class="nf">appendData</span><span class="p">:[</span><span class="s">@"&amp;refresh_token=dn43ud8uj32nk2je"</span> <span class="nf">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">postData</span> <span class="nf">appendData</span><span class="p">:[</span><span class="s">@"&amp;client_id=2g8die7vki53974mp72sa4fgp5"</span> <span class="nf">dataUsingEncoding</span><span class="p">:</span><span class="n">NSUTF8StringEncoding</span><span class="p">]];</span>
+<span class="p">[</span><span class="n">request</span> <span class="nf">setHTTPBody</span><span class="p">:</span><span class="n">postData</span><span class="p">];</span>
+
+<span class="p">[</span><span class="n">request</span> <span class="nf">setHTTPMethod</span><span class="p">:</span><span class="s">@"POST"</span><span class="p">];</span>
+
+<span class="n">NSURLSession</span> <span class="o">*</span><span class="n">session</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLSession</span> <span class="nf">sharedSession</span><span class="p">];</span>
+<span class="n">NSURLSessionDataTask</span> <span class="o">*</span><span class="n">dataTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">session</span> <span class="nf">dataTaskWithRequest</span><span class="p">:</span><span class="n">request</span>
+<span class="nl">completionHandler:</span><span class="o">^</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="n">httpResponse</span> <span class="o">=</span> <span class="p">(</span><span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="p">)</span> <span class="n">response</span><span class="p">;</span>
+    <span class="n">NSError</span> <span class="o">*</span><span class="n">parseError</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">responseDictionary</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSJSONSerialization</span> <span class="nf">JSONObjectWithData</span><span class="p">:</span><span class="n">data</span> <span class="nf">options</span><span class="p">:</span><span class="mi">0</span> <span class="n">error</span><span class="o">:&amp;</span><span class="n">parseError</span><span class="p">];</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span><span class="n">responseDictionary</span><span class="p">);</span>
+    <span class="n">dispatch_semaphore_signal</span><span class="p">(</span><span class="n">sema</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}];</span>
+<span class="p">[</span><span class="n">dataTask</span> <span class="nf">resume</span><span class="p">];</span>
+<span class="n">dispatch_semaphore_wait</span><span class="p">(</span><span class="n">sema</span><span class="p">,</span> <span class="n">DISPATCH_TIME_FOREVER</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>After a successful request, a valid access token will be returned in the response:  <span style="float:right">200 OK</span></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w"> 
+  </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJz9sdfsdfsdfsd"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"id_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"dmcxd329ujdmkemkd349r"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w"> 
+  </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3600</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>A refresh token is issued only once when you first authenticate using the <code>authorization_code</code> flow. Since the access token expires after one hour, you can request a new access token by passing the <code>refresh_token</code> to the TOKEN Endpoint and using the<br>
+<code>refresh_token</code> grant type. While the default expiration of the refresh token is thirty (30) days, you can modify this parameter via the publisher console.</p>
+
+<p>To get a new access token, send a POST request to the TOKEN Endpoint just like before:</p>
+
+<p><code>POST https://auth.paket.tv/oauth2/token</code></p>
+
+<p>Only this time, with the following parameters:</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>grant_type</code></td>
+<td>string</td>
+<td><strong>Required</strong> Value <code>refresh_token</code></td>
+</tr>
+<tr>
+<td><code>refresh_token</code></td>
+<td>string</td>
+<td><strong>Required</strong> The refresh token received in Step 3</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>string</td>
+<td><strong>Required</strong> The requesting client&#39;s ID as specified in the publisher portal</td>
+</tr>
+</tbody></table>
+
+<p>And the following request headers:</p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Value</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Content-Type</code></td>
+<td>string</td>
+<td><code>application/x-www-form-urlencoded</code></td>
+</tr>
+</tbody></table>
+<h2 id='revoking-access'>Revoking Access</h2>
+<blockquote>
+<p>An example of the constructed logout URL:  </p>
+</blockquote>
+<div class="highlight"><pre class="highlight plaintext"><code>GET https://auth.paket.tv/logout?client_id=2g8die7vki53974mp72sa4fgp5
+</code></pre></div>
+<p><code>GET https://auth.paket.tv/logout?client_id=CLIENT_ID</code></p>
+
+<p>To log a user out of your client and disconnect your application’s access to the user’s account, redirect the user to the LOGOUT Endpoint with the following parameters:  </p>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>client_id</code></td>
+<td>string</td>
+<td><strong>Required</strong> The requesting client&#39;s ID as specified in the publisher portal</td>
+</tr>
+<tr>
+<td><code>logout_uri</code></td>
+<td>string</td>
+<td><strong>Optional</strong> The <code>logout_uri</code> specified in your client configuration</td>
+</tr>
+</tbody></table>
+<h1 id='licenses'>Licenses</h1>
+<p>The Paket Licenses API currently supports the following endpoints:  </p>
+
+<ul>
+<li><code>GET /licenses</code></li>
+</ul>
+<h2 id='get-licenses'>GET /licenses</h2>
+<blockquote>
+<p>Get licenses example request </p>
+</blockquote>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"uri"</span>
+<span class="nb">require</span> <span class="s2">"net/http"</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="no">URI</span><span class="p">(</span><span class="s2">"https://api.paket.tv/licenses"</span><span class="p">)</span>
+
+<span class="n">https</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="nf">host</span><span class="p">,</span> <span class="n">url</span><span class="p">.</span><span class="nf">port</span><span class="p">);</span>
+<span class="n">https</span><span class="p">.</span><span class="nf">use_ssl</span> <span class="o">=</span> <span class="kp">true</span>
+
+<span class="n">request</span> <span class="o">=</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTP</span><span class="o">::</span><span class="no">Get</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">request</span><span class="p">[</span><span class="s2">"Authorization"</span><span class="p">]</span> <span class="o">=</span> <span class="s2">"eyJz9sdfsdfsdfsd"</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">https</span><span class="p">.</span><span class="nf">request</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="n">response</span><span class="p">.</span><span class="nf">read_body</span>
+</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">http.client</span>
+<span class="kn">import</span> <span class="nn">mimetypes</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">client</span><span class="p">.</span><span class="n">HTTPSConnection</span><span class="p">(</span><span class="s">"api.paket.tv"</span><span class="p">)</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="s">''</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'eyJz9sdfsdfsdfsd'</span>
+<span class="p">}</span>
+<span class="n">conn</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="s">"GET"</span><span class="p">,</span> <span class="s">"/licenses"</span><span class="p">,</span> <span class="n">payload</span><span class="p">,</span> <span class="n">headers</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">conn</span><span class="p">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">res</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">"utf-8"</span><span class="p">))</span>
+</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl https://api.paket.tv/licenses <span class="se">\</span>
+  <span class="nt">-X</span> GET <span class="se">\</span>
+  <span class="nt">-H</span> <span class="s1">'Authorization: eyJz9sdfsdfsdfsd'</span>
+</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">var</span> <span class="nx">myHeaders</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Headers</span><span class="p">();</span>
+<span class="nx">myHeaders</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="dl">"</span><span class="s2">Authorization</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">eyJz9sdfsdfsdfsd</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="kd">var</span> <span class="nx">requestOptions</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">method</span><span class="p">:</span> <span class="dl">'</span><span class="s1">GET</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">headers</span><span class="p">:</span> <span class="nx">myHeaders</span><span class="p">,</span>
+  <span class="na">redirect</span><span class="p">:</span> <span class="dl">'</span><span class="s1">follow</span><span class="dl">'</span>
+<span class="p">};</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="dl">"</span><span class="s2">https://api.paket.tv/licenses</span><span class="dl">"</span><span class="p">,</span> <span class="nx">requestOptions</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">())</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">))</span>
+  <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">));</span>
+</code></pre></div><div class="highlight"><pre class="highlight java tab-java"><code><span class="nc">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">OkHttpClient</span><span class="o">().</span><span class="na">newBuilder</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="nc">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Request</span><span class="o">.</span><span class="na">Builder</span><span class="o">()</span>
+  <span class="o">.</span><span class="na">url</span><span class="o">(</span><span class="s">"https://api.paket.tv/licenses"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">method</span><span class="o">(</span><span class="s">"GET"</span><span class="o">,</span> <span class="kc">null</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">addHeader</span><span class="o">(</span><span class="s">"Authorization"</span><span class="o">,</span> <span class="s">"eyJz9sdfsdfsdfsd"</span><span class="o">)</span>
+  <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+<span class="nc">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="na">newCall</span><span class="o">(</span><span class="n">request</span><span class="o">).</span><span class="na">execute</span><span class="o">();</span>
+</code></pre></div><div class="highlight"><pre class="highlight swift tab-swift"><code><span class="kd">import</span> <span class="kt">Foundation</span>
+
+<span class="k">var</span> <span class="nv">semaphore</span> <span class="o">=</span> <span class="kt">DispatchSemaphore</span> <span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://api.paket.tv/licenses"</span><span class="p">)</span><span class="o">!</span><span class="p">,</span><span class="nv">timeoutInterval</span><span class="p">:</span> <span class="kt">Double</span><span class="o">.</span><span class="n">infinity</span><span class="p">)</span>
+<span class="n">request</span><span class="o">.</span><span class="nf">addValue</span><span class="p">(</span><span class="s">"eyJz9sdfsdfsdfsd"</span><span class="p">,</span> <span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Authorization"</span><span class="p">)</span>
+
+<span class="n">request</span><span class="o">.</span><span class="n">httpMethod</span> <span class="o">=</span> <span class="s">"GET"</span>
+
+<span class="k">let</span> <span class="nv">task</span> <span class="o">=</span> <span class="kt">URLSession</span><span class="o">.</span><span class="n">shared</span><span class="o">.</span><span class="nf">dataTask</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="n">request</span><span class="p">)</span> <span class="p">{</span> <span class="n">data</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span> 
+  <span class="k">guard</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">describing</span><span class="p">:</span> <span class="n">error</span><span class="p">))</span>
+    <span class="k">return</span>
+  <span class="p">}</span>
+  <span class="nf">print</span><span class="p">(</span><span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span><span class="o">!</span><span class="p">)</span>
+  <span class="n">semaphore</span><span class="o">.</span><span class="nf">signal</span><span class="p">()</span>
+<span class="p">}</span>
+
+<span class="n">task</span><span class="o">.</span><span class="nf">resume</span><span class="p">()</span>
+<span class="n">semaphore</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+</code></pre></div><div class="highlight"><pre class="highlight objective_c tab-objective_c"><code><span class="cp">#import &lt;Foundation/Foundation.h&gt;
+</span>
+<span class="n">dispatch_semaphore_t</span> <span class="n">sema</span> <span class="o">=</span> <span class="n">dispatch_semaphore_create</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+
+<span class="n">NSMutableURLRequest</span> <span class="o">*</span><span class="n">request</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSMutableURLRequest</span> <span class="nf">requestWithURL</span><span class="p">:[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="s">@"https://api.paket.tv/licenses"</span><span class="p">]</span>
+  <span class="nl">cachePolicy:</span><span class="n">NSURLRequestUseProtocolCachePolicy</span>
+  <span class="nl">timeoutInterval:</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">];</span>
+<span class="n">NSDictionary</span> <span class="o">*</span><span class="n">headers</span> <span class="o">=</span> <span class="p">@{</span>
+  <span class="s">@"Authorization"</span><span class="o">:</span> <span class="s">@"eyJz9sdfsdfsdfsd"</span>
+<span class="p">};</span>
+
+<span class="p">[</span><span class="n">request</span> <span class="nf">setAllHTTPHeaderFields</span><span class="p">:</span><span class="n">headers</span><span class="p">];</span>
+
+<span class="p">[</span><span class="n">request</span> <span class="nf">setHTTPMethod</span><span class="p">:</span><span class="s">@"GET"</span><span class="p">];</span>
+
+<span class="n">NSURLSession</span> <span class="o">*</span><span class="n">session</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURLSession</span> <span class="nf">sharedSession</span><span class="p">];</span>
+<span class="n">NSURLSessionDataTask</span> <span class="o">*</span><span class="n">dataTask</span> <span class="o">=</span> <span class="p">[</span><span class="n">session</span> <span class="nf">dataTaskWithRequest</span><span class="p">:</span><span class="n">request</span>
+<span class="nl">completionHandler:</span><span class="o">^</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">data</span><span class="p">,</span> <span class="n">NSURLResponse</span> <span class="o">*</span><span class="n">response</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span> <span class="n">error</span><span class="p">);</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="n">httpResponse</span> <span class="o">=</span> <span class="p">(</span><span class="n">NSHTTPURLResponse</span> <span class="o">*</span><span class="p">)</span> <span class="n">response</span><span class="p">;</span>
+    <span class="n">NSError</span> <span class="o">*</span><span class="n">parseError</span> <span class="o">=</span> <span class="nb">nil</span><span class="p">;</span>
+    <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">responseDictionary</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSJSONSerialization</span> <span class="nf">JSONObjectWithData</span><span class="p">:</span><span class="n">data</span> <span class="nf">options</span><span class="p">:</span><span class="mi">0</span> <span class="n">error</span><span class="o">:&amp;</span><span class="n">parseError</span><span class="p">];</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"%@"</span><span class="p">,</span><span class="n">responseDictionary</span><span class="p">);</span>
+    <span class="n">dispatch_semaphore_signal</span><span class="p">(</span><span class="n">sema</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}];</span>
+<span class="p">[</span><span class="n">dataTask</span> <span class="nf">resume</span><span class="p">];</span>
+<span class="n">dispatch_semaphore_wait</span><span class="p">(</span><span class="n">sema</span><span class="p">,</span> <span class="n">DISPATCH_TIME_FOREVER</span><span class="p">);</span>
+</code></pre></div>
+<blockquote>
+<p>Example response <span style="float:right">200 OK</span></p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"plan_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"304908b5-2843-21c9-9d79-67b765da04f0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"client_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2g8die7vki53974mp72sa4fgp5"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"item"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"license_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SINGLE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Kidstream"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"renew_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RENEW"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"renews_on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-10-23T16:35:28+00:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"interval_length"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"interval_unit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"MONTHS"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"billing_cycle_anchor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-10-23T09:35:28-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"date_added"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-10-16T09:35:27-07:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"trial"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"trial_duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"trial_reset"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"license"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b90831a7-58bf-4ab3-9fd1-04594e635f6a"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"internal_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"KS001"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monthly Access"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Monthly full access to Kidstream"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"locales"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+          </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"United States"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"country_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"US"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>The <code>/licenses</code> endpoint retrieves only the authenticated user&#39;s licenses to the requesting client&#39;s app.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
+<p><code>GET https://api.paket.tv/licenses</code></p>
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p><strong>Authorization</strong> OAuth 2.0</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<p>License types currently available include:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+<ul>
+<li><code>SINGLE</code> - The license belongs to a single application item</li>
+<li><code>BUNDLE</code> - The license belongs to a bundle item</li>
+</ul>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
+<p>The <code>status</code> attribute represents the current status of the item, whereas the <code>renew_status</code> indicates if the item is slated for renewal.</p>
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>The item&#39;s available statuses are:</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<ul>
+<li><code>ACTIVE</code> - The item is currently active and in good standing</li>
+<li><code>OVERDUE</code> - The item is active, though there is a payment processing issue pending resolution</li>
+<li><code>CANCELLED</code> - The item has been cancelled</li>
+</ul>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span>
-  <span class="nt">-X</span> DELETE
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+<p>The item&#39;s available renew statuses are:</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
+<ul>
+<li><code>RENEW</code> - The item is scheduled to renew on the <code>renews_on</code> date</li>
+<li><code>CANCEL</code> - The item is scheduled to be cancelled on the <code>renews_on</code> date</li>
+</ul>
+
+<p>The Paket API returns all <code>ACTIVE</code> and <code>OVERDUE</code> items and returns the previous 12 months&#39; <code>CANCELLED</code> items.</p>
 <h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<p>The Paket API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -534,57 +1082,56 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>Bad Request</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>Unauthorized</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Not Found</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+<td>Method Not Allowed</td>
 </tr>
 <tr>
 <td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>Not Acceptable</td>
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
+<td>Item removed</td>
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>Too Many Requests</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>Internal Server Error</td>
 </tr>
 <tr>
 <td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>Service Unavailable</td>
 </tr>
 </tbody></table>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
-                <a href="#" data-language-name="shell">shell</a>
-                <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
-                <a href="#" data-language-name="javascript">javascript</a>
+                <a href="#" data-language-name="shell">cURL</a>
+                <a href="#" data-language-name="javascript">Javascript</a>
+                <a href="#" data-language-name="ruby">Ruby</a>
+                <a href="#" data-language-name="python">Python</a>
+                <a href="#" data-language-name="java">Java</a>
+                <a href="#" data-language-name="swift">Swift</a>
+                <a href="#" data-language-name="objective_c">Objective-C</a>
           </div>
       </div>
     </div>
