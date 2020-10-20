@@ -26,10 +26,35 @@ under the License.
 <!doctype html>
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GH5B1MYNSS"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GH5B1MYNSS');
+    </script> 
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Primary Meta Tags -->
     <title><%= current_page.data.title || "Paket :: API Documentation" %></title>
+    <meta name="title" content=<%= current_page.data.title || "Paket :: API Documentation" %>>
+    <meta name="description" content="Welcome to the Paket API Docs. Start here to incorporate Paket into your subscription or ad-supported streaming media service.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://docs.paket.tv">
+    <meta property="og:title" content=<%= current_page.data.title || "Paket :: API Documentation" %>>
+    <meta property="og:description" content="Welcome to the Paket API Docs. Start here to incorporate Paket into your subscription or ad-supported streaming media service.">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://docs.paket.tv/">
+    <meta property="twitter:title" content=<%= current_page.data.title || "Paket :: API Documentation" %>>
+    <meta property="twitter:description" content="Welcome to the Paket API Docs. Start here to incorporate Paket into your subscription or ad-supported streaming media service.">
+    
     <%= favicon_tag 'favicon.ico' %>
     <style media="screen">
       <%= Rouge::Themes::MonokaiSublimeSlate.render(:scope => '.highlight') %>
