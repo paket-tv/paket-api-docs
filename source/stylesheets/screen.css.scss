@@ -77,12 +77,12 @@ a {
 }
 
 .nav-container-right ul li a {
-  color: $nav-subitem-bg;
+  color: #ffffff80;
   transition: .5s;
 }
 
 .nav-container-right ul li a:hover {
-  color: #ccc;
+  color: $nav-subitem-bg;
   transition: .5s;
 }
 
