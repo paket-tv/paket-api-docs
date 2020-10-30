@@ -12,7 +12,7 @@ The Paket Licenses API currently supports the following endpoints:
 require "uri"
 require "net/http"
 
-url = URI("https://api.paket.tv/licenses")
+url = URI("https://api.paket.tv/v1/licenses")
 
 https = Net::HTTP.new(url.host, url.port);
 https.use_ssl = true
@@ -32,14 +32,14 @@ payload = ''
 headers = {
   'Authorization': 'eyJz9sdfsdfsdfsd'
 }
-conn.request("GET", "/licenses", payload, headers)
+conn.request("GET", "/v1/licenses", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
 ```
 
 ```shell
-curl https://api.paket.tv/licenses \
+curl https://api.paket.tv/v1/licenses \
   -X GET \
   -H 'Authorization: eyJz9sdfsdfsdfsd'
 ```
@@ -54,7 +54,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://api.paket.tv/licenses", requestOptions)
+fetch("https://api.paket.tv/v1/licenses", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -64,7 +64,7 @@ fetch("https://api.paket.tv/licenses", requestOptions)
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://api.paket.tv/licenses")
+  .url("https://api.paket.tv/v1/licenses")
   .method("GET", null)
   .addHeader("Authorization", "eyJz9sdfsdfsdfsd")
   .build();
@@ -76,7 +76,7 @@ import Foundation
 
 var semaphore = DispatchSemaphore (value: 0)
 
-var request = URLRequest(url: URL(string: "https://api.paket.tv/licenses")!,timeoutInterval: Double.infinity)
+var request = URLRequest(url: URL(string: "https://api.paket.tv/v1/licenses")!,timeoutInterval: Double.infinity)
 request.addValue("eyJz9sdfsdfsdfsd", forHTTPHeaderField: "Authorization")
 
 request.httpMethod = "GET"
@@ -99,7 +99,7 @@ semaphore.wait()
 
 dispatch_semaphore_t sema = dispatch_semaphore_create(0);
 
-NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.paket.tv/licenses"]
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.paket.tv/v1/licenses"]
   cachePolicy:NSURLRequestUseProtocolCachePolicy
   timeoutInterval:10.0];
 NSDictionary *headers = @{
@@ -170,7 +170,7 @@ The `/licenses` endpoint retrieves only the authenticated user's licenses to the
 
 ### HTTP Request
 
-`GET https://api.paket.tv/licenses`
+`GET https://api.paket.tv/v1/licenses`
 
 **Authorization** OAuth 2.0
 

@@ -16,6 +16,7 @@ toc_footers:
 
 copyright: 
   - <a>© 2020-2021 Paket Media, Inc.</a>
+  - <a href="https://publisher.paket.tv/privacy-policy" target="_blank">Privacy Policy</a> | <a href="https://publisher.paket.tv/terms-of-service" target="_blank">Terms of Service</a>
 
 includes:
   - authentication
