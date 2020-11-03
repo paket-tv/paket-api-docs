@@ -44,7 +44,7 @@ Also, please note that this documentation illustrates how to call the API using 
   https://api.paket.tv/v1/
 ```
   
-Before we begin, it's important to understand the key concepts and taxonomy of the platform, each of which can be configured in the [Paket Publisher Portal](https://www.paket.tv):
+Before we begin, it's important to understand the key concepts and taxonomy of the platform, each of which can be configured in the [Paket Publisher Portal](https://publisher.paket.tv):
 
 **Companies**: The Company is the primary object to which Apps are associated. This is where the business details are configured. In most situations, an account will have only one Company;
 
