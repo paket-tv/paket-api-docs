@@ -20,7 +20,7 @@ copyright:
 
 includes:
   - authentication
-  - licenses
+  - subscriptions
   - errors
 
 search: false
@@ -50,7 +50,9 @@ Before we begin, it's important to understand the key concepts and taxonomy of t
 
 **Apps**: The App is the primary object to which Clients and Licenses are associated. This is the high-level representation of your service, its consumer-facing title (e.g., Hulu), description, and supporting metadata;
 
-**Licenses**: The License object represents an entitlement offered via your App (e.g., Limited Ads at $5.99 / mo, No Ads at $9.99 / mo, etc.), its pricing, and regional availability; and
+**Licenses**: The License object represents an entitlement offered via your App (e.g., Limited Ads at $5.99 / mo, No Ads at $9.99 / mo, etc.), its pricing, and regional availability;
+
+**Subscriptions**: The items returned when calling the `/subscriptions` api endpoint. Each item represents either a subscription to an app or bundle and contains a reference the corresponding License; and
 
 **Clients**: The Client object contains the platform or device-specific Paket auth (OAuth2) configuration for a service's discrete user-facing application (e.g., Roku, iOS, Android, etc.).
 

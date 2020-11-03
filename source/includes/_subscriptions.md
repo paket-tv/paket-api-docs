@@ -1,18 +1,18 @@
-# Licenses
+# Subscriptions
 
-The Paket Licenses API currently supports the following endpoints:  
+The Paket Subscriptions API currently supports the following endpoints:  
 
-- `GET /licenses`
+- `GET /subscriptions`
 
-## GET /licenses
+## GET /subscriptions
 
-> Get licenses example request 
+> Get subscriptions example request 
 
 ```ruby
 require "uri"
 require "net/http"
 
-url = URI("https://api.paket.tv/v1/licenses")
+url = URI("https://api.paket.tv/v1/subscriptions")
 
 https = Net::HTTP.new(url.host, url.port);
 https.use_ssl = true
@@ -32,14 +32,14 @@ payload = ''
 headers = {
   'Authorization': 'eyJz9sdfsdfsdfsd'
 }
-conn.request("GET", "/v1/licenses", payload, headers)
+conn.request("GET", "/v1/subscriptions", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
 ```
 
 ```shell
-curl https://api.paket.tv/v1/licenses \
+curl https://api.paket.tv/v1/subscriptions \
   -X GET \
   -H 'Authorization: eyJz9sdfsdfsdfsd'
 ```
@@ -54,7 +54,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("https://api.paket.tv/v1/licenses", requestOptions)
+fetch("https://api.paket.tv/v1/subscriptions", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -64,7 +64,7 @@ fetch("https://api.paket.tv/v1/licenses", requestOptions)
 OkHttpClient client = new OkHttpClient().newBuilder()
   .build();
 Request request = new Request.Builder()
-  .url("https://api.paket.tv/v1/licenses")
+  .url("https://api.paket.tv/v1/subscriptions")
   .method("GET", null)
   .addHeader("Authorization", "eyJz9sdfsdfsdfsd")
   .build();
@@ -76,7 +76,7 @@ import Foundation
 
 var semaphore = DispatchSemaphore (value: 0)
 
-var request = URLRequest(url: URL(string: "https://api.paket.tv/v1/licenses")!,timeoutInterval: Double.infinity)
+var request = URLRequest(url: URL(string: "https://api.paket.tv/v1/subscriptions")!,timeoutInterval: Double.infinity)
 request.addValue("eyJz9sdfsdfsdfsd", forHTTPHeaderField: "Authorization")
 
 request.httpMethod = "GET"
@@ -99,7 +99,7 @@ semaphore.wait()
 
 dispatch_semaphore_t sema = dispatch_semaphore_create(0);
 
-NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.paket.tv/v1/licenses"]
+NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://api.paket.tv/v1/subscriptions"]
   cachePolicy:NSURLRequestUseProtocolCachePolicy
   timeoutInterval:10.0];
 NSDictionary *headers = @{
@@ -154,6 +154,7 @@ dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
         "internal_id": "KS001",
         "name": "Monthly Access",
         "description": "Monthly full access to Kidstream",
+        "rank": 0,
         "locales": [
           {
             "name": "United States",
@@ -166,30 +167,30 @@ dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
 }
 ```
 
-The `/licenses` endpoint retrieves only the authenticated user's licenses to the requesting client's app.
+The `/subscriptions` endpoint retrieves only the authenticated user's subscriptions to the requesting client's app. The subscription items are returned in order of descending rank, with the subscription offering the highest service level in the first position.
 
 ### HTTP Request
 
-`GET https://api.paket.tv/v1/licenses`
+`GET https://api.paket.tv/v1/subscriptions`
 
 **Authorization** OAuth 2.0
 
-License types currently available include:
+Subscription types currently available include:
 
-- `SINGLE` - The license belongs to a single application item
-- `BUNDLE` - The license belongs to a bundle item
+- `SINGLE` - The subscription license belongs to a single application item
+- `BUNDLE` - The subscription license belongs to a bundle item
 
-The `status` attribute represents the current status of the item, whereas the `renew_status` indicates if the item is slated for renewal.
+The `status` attribute represents the current status of the subscription, whereas the `renew_status` indicates if the subscription is slated for renewal.
 
-The item's available statuses are:
+The subscriptions' available statuses are:
 
-- `ACTIVE` - The item is currently active and in good standing
-- `OVERDUE` - The item is active, though there is a payment processing issue pending resolution
-- `CANCELLED` - The item has been cancelled
+- `ACTIVE` - The subscription is currently active and in good standing
+- `OVERDUE` - The subscription is active, though there is a payment processing issue pending resolution
+- `CANCELLED` - The subscription has been cancelled (returns cancelled subscriptions for past 12 months)
 
-The item's available renew statuses are:
+The subscriptions' available renew statuses are:
 
-- `RENEW` - The item is scheduled to renew on the `renews_on` date
-- `CANCEL` - The item is scheduled to be cancelled on the `renews_on` date
+- `RENEW` - The subscription is scheduled to renew on the `renews_on` date
+- `CANCEL` - The subscription is scheduled to be cancelled on the `renews_on` date
 
-The Paket API returns all `ACTIVE` and `OVERDUE` items and returns the previous 12 months' `CANCELLED` items.
+The Paket API returns all `ACTIVE` and `OVERDUE` subscriptions and returns the previous 12 months' `CANCELLED` subscriptions.
